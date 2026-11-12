@@ -9,7 +9,7 @@
 
 import type { Jeu } from './donnees.ts';
 import type { EtatJeu } from './etat.ts';
-import { cloner } from './etat.ts';
+import { cloner, migrerEtat } from './etat.ts';
 import type { Evenement } from './evenements.ts';
 import { avancer, avancerHorsLigne, nettoyer, verifierCrise } from './simulation.ts';
 import type { ActionHorodatee } from './actions.ts';
@@ -42,7 +42,7 @@ export function synchroniser(
   alea: Alea,
   dons: DonVoix[] = [],
 ): ResultatSync {
-  let etat = cloner(etatInitial);
+  let etat = migrerEtat(cloner(etatInitial), jeu);
   const evenements: Evenement[] = [];
   const refus: ResultatSync['refus'] = [];
   const donsAppliques: string[] = [];

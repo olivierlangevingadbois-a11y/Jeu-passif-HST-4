@@ -450,3 +450,14 @@ describe('paliers', () => {
     expect(cap).toBe(jeu.balance.habitants.baseCap + 25 * jeu.balance.buildings.eglise_paroissiale.capPerLevel!);
   });
 });
+
+describe('sauvegardes anciennes', () => {
+  it('complète les champs manquants', () => {
+    const e = nouvelEtat(jeu, T0) as unknown as Record<string, unknown>;
+    delete e.crisesALire;
+    delete (e.portefeuille as Record<string, unknown>).paquetsGratuits;
+    const r = synchroniser(e as unknown as EtatJeu, [], T0 + 1000, jeu, CTX_PROLOGUE, alea);
+    expect(r.etat.crisesALire).toEqual([]);
+    expect(r.etat.portefeuille.paquetsGratuits).toBe(0);
+  });
+});

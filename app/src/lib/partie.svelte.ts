@@ -12,7 +12,7 @@ import type { Evenement } from '@jeu/evenements.ts';
 import { synchroniser } from '@jeu/sync.ts';
 import { jeu } from './donnees.ts';
 import type { Backend, Profil, ReponseSync } from './backend/types.ts';
-import { SessionExpiree } from './backend/types.ts';
+import { ErreurReseau, SessionExpiree } from './backend/types.ts';
 
 const aleaPrediction = () => 0.5;
 
@@ -65,8 +65,11 @@ export class Partie {
   }
 
   private surVisibilite = () => {
-    if (document.visibilityState === 'hidden') this.surFermeture();
-    else void this.synchroniserMaintenant();
+    // Application mise en arrière-plan : sauvegarde normale (la réponse sera reçue au retour).
+    // Fermeture de la page : envoi de dernière chance (pagehide).
+    if (document.visibilityState === 'hidden') {
+      if (this.enAttente.length) void this.synchroniserMaintenant();
+    } else void this.synchroniserMaintenant();
   };
 
   private surFermeture = () => {
@@ -169,9 +172,15 @@ export class Partie {
         this.sessionExpiree = true;
         return null;
       }
-      // Pas de réseau : on garde les actions pour le prochain essai.
-      this.enAttente = [...envoi, ...this.enAttente];
-      this.horsLigne = true;
+      if (e instanceof ErreurReseau) {
+        // Pas de réseau : on garde les actions pour le prochain essai.
+        this.enAttente = [...envoi, ...this.enAttente];
+        this.horsLigne = true;
+        return null;
+      }
+      // Le serveur a refusé le lot (erreur inattendue) : on l'abandonne pour ne pas rester bloqué.
+      this.message((e as Error).message || 'Erreur du serveur.', 'erreur');
+      this.recalculer();
       return null;
     }
   }

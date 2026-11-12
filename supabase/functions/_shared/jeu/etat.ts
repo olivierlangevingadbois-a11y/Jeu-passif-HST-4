@@ -129,3 +129,25 @@ export function nouvelEtat(jeu: Jeu, maintenant: number): EtatJeu {
 export function cloner<T>(v: T): T {
   return structuredClone(v);
 }
+
+/**
+ * Complète une sauvegarde ancienne avec les champs ajoutés depuis (valeurs par défaut).
+ * À compléter si le format change de façon plus profonde (et augmenter SCHEMA_ETAT).
+ */
+export function migrerEtat(etat: EtatJeu, jeu: Jeu): EtatJeu {
+  const defaut = nouvelEtat(jeu, etat.lastComputedAt ?? Date.now());
+  const completer = (cible: Record<string, unknown>, modele: Record<string, unknown>) => {
+    for (const [cle, valeur] of Object.entries(modele)) {
+      if (!(cle in cible) || cible[cle] === undefined) cible[cle] = structuredClone(valeur);
+      else if (valeur && typeof valeur === 'object' && !Array.isArray(valeur) && cible[cle] && typeof cible[cle] === 'object') {
+        // Les dictionnaires libres (bâtiments, cartes, historique) ne sont pas complétés.
+        if (['buildings', 'cartes', 'historique'].includes(cle)) continue;
+        completer(cible[cle] as Record<string, unknown>, valeur as Record<string, unknown>);
+      }
+    }
+  };
+  completer(etat as unknown as Record<string, unknown>, defaut as unknown as Record<string, unknown>);
+  if (!jeu.balance.eras[etat.era]) etat.era = defaut.era;
+  etat.schema = SCHEMA_ETAT;
+  return etat;
+}

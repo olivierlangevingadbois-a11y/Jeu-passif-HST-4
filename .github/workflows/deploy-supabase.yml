@@ -42,9 +42,9 @@ jobs:
           else
             echo "pret=oui" >> "$GITHUB_OUTPUT"
           fi
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.config.outputs.pret == 'oui'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: steps.config.outputs.pret == 'oui'
         with:
           node-version: 22
