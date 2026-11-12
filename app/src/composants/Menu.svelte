@@ -18,6 +18,8 @@
 
   async function outil(f: () => void) {
     f();
+    // Fermer le menu pour laisser voir la fenêtre d'événement (Voix reçues, absence...).
+    fermer();
     await partie.synchroniserMaintenant();
   }
 

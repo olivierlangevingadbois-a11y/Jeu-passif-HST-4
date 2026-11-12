@@ -44,9 +44,20 @@ export function coutNiveaux(jeu: Jeu, id: string, niveauActuel: number, n: numbe
   return total;
 }
 
-/** Multiplicateur venant des améliorations achetées d'un bâtiment. */
+/** Nombre de paliers atteints par un bâtiment. */
+export function paliersAtteints(jeu: Jeu, niveauBatiment: number): number {
+  return jeu.balance.paliers.niveaux.filter((n) => niveauBatiment >= n).length;
+}
+
+/** Prochain palier d'un bâtiment, ou null. */
+export function prochainPalier(jeu: Jeu, niveauBatiment: number): number | null {
+  return jeu.balance.paliers.niveaux.find((n) => niveauBatiment < n) ?? null;
+}
+
+/** Multiplicateur venant des améliorations achetées et des paliers d'un bâtiment. */
 function multAmeliorations(etat: EtatJeu, jeu: Jeu, b: Building): number {
-  let m = 1;
+  // Les paliers ne touchent que les bâtiments qui produisent (pas les plafonds ni les multiplicateurs).
+  let m = b.effect.kind === 'produce' ? Math.pow(jeu.balance.paliers.multiplicateur, paliersAtteints(jeu, niveau(etat, b.id))) : 1;
   for (const u of b.upgrades) {
     if (etat.partie.upgrades.includes(u.id)) m *= jeu.balance.upgrades[u.id]?.multiplier ?? 1;
   }

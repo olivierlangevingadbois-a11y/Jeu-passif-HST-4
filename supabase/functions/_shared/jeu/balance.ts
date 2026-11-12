@@ -76,6 +76,8 @@ export interface Balance {
   eras: Record<EraId, EraBalance | undefined>;
   buildings: Record<string, BuildingBalance>;
   upgrades: Record<string, UpgradeBalance>;
+  /** Paliers : à chacun de ces niveaux, la production d'un bâtiment producteur est multipliée. */
+  paliers: { niveaux: number[]; multiplicateur: number };
   recensement: { coefficient: number; divisor: number };
   heritage: { coefficient: number; divisor: number; recensementWeight: number; minimum: number };
   heritageTree: HeritageNode[];

@@ -432,3 +432,21 @@ describe('divers', () => {
     void appliquerAction;
   });
 });
+
+describe('paliers', () => {
+  it('doublent la production d\'un bâtiment producteur au niveau 25', () => {
+    const e = etatRiche();
+    e.partie.buildings.moulin_banal = 24;
+    const avant = calculerTaux(e, jeu, calculerModificateurs(e, jeu, T0)).parBatiment.moulin_banal;
+    e.partie.buildings.moulin_banal = 25;
+    const apres = calculerTaux(e, jeu, calculerModificateurs(e, jeu, T0)).parBatiment.moulin_banal;
+    expect(apres / avant).toBeCloseTo((25 / 24) * jeu.balance.paliers.multiplicateur);
+  });
+
+  it('ne touchent pas le plafond de l\'église', () => {
+    const e = etatRiche();
+    e.partie.buildings.eglise_paroissiale = 25;
+    const cap = calculerTaux(e, jeu, calculerModificateurs(e, jeu, T0)).plafondHabitants;
+    expect(cap).toBe(jeu.balance.habitants.baseCap + 25 * jeu.balance.buildings.eglise_paroissiale.capPerLevel!);
+  });
+});

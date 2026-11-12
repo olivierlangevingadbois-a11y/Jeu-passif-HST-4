@@ -11,6 +11,7 @@
     estDebloque,
     heritageAuPassage,
     multiplicateurRecensement,
+    prochainPalier,
   } from '@jeu/economie.ts';
   import type { Building } from '@jeu/contenu.ts';
   import { nombre, parSeconde, pourcentage, multiplicateur } from '../lib/format.ts';
@@ -152,6 +153,9 @@
       {#if !b.validated}<span class="brouillon">Brouillon</span>{/if}
       {#if debloque}
         <p class="petit-texte">{effet(b)}</p>
+        {#if b.effect.kind === 'produce' && prochainPalier(jeu, niv) !== null}
+          <p class="petit-texte doux">Prochain palier : niveau {prochainPalier(jeu, niv)} (production ×{jeu.balance.paliers.multiplicateur})</p>
+        {/if}
         <button disabled={etat.partie.argent < achat.cout} onclick={() => construire(b)}>
           {niv === 0 ? 'Construire' : 'Agrandir'}{achat.n > 1 ? ` ×${achat.n}` : ''} : {nombre(achat.cout)} argent
         </button>

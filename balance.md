@@ -10,7 +10,16 @@ npm run verifier
 npm run simuler
 ```
 
-Le simulateur affiche le temps estimé pour finir chaque époque avec quelques profils de joueurs.
+Le simulateur affiche le temps estimé pour finir chaque époque avec quelques profils de joueurs. Avec les valeurs actuelles (novembre 2026) :
+
+| Profil | Prologue | Époque 1 |
+| --- | --- | --- |
+| Découverte (une séance d'une heure) | environ 10 min | |
+| Assidu (4 × 10 min par jour) | | environ 13 jours |
+| Régulier (2 × 10 min par jour) | | environ 21 jours |
+| Occasionnel (1 × 10 min par jour) | | environ 42 jours |
+
+Pour allonger ou raccourcir l'Époque 1, change surtout `eras.epoque_1.milestone.productionTotal` : la production totale grandit à peu près en ligne droite après la première semaine, donc doubler ce chiffre ajoute environ deux semaines. Option `--detail` : affiche la progression jour par jour du profil Régulier.
 
 ## Temps et synchronisation
 
@@ -50,6 +59,7 @@ Le simulateur affiche le temps estimé pour finir chaque époque avec quelques p
 | `multiplierPerLevel` | Bâtiment-multiplicateur (gare) : 0.15 = +15 % par niveau. |
 | `archivesBonusPerLevel` | École de rang : bonus des récompenses des Archives. |
 | `upgrades.*.cost`, `requiresLevel`, `multiplier` | Prix, niveau requis et effet d'une amélioration. |
+| `paliers.niveaux`, `paliers.multiplicateur` | À chacun de ces niveaux (25, 50, 75...), la production d'un bâtiment producteur double. Donne des objectifs tout au long de l'époque. |
 
 ## Recensement et Héritage
 
