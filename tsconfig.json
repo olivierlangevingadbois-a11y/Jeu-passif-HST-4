@@ -19,5 +19,6 @@
       "@donnees/*": ["./supabase/functions/_shared/donnees/*"]
     }
   },
+  "exclude": ["scripts/serveur-fonctions-local.ts"],
   "include": ["app/src/**/*", "supabase/functions/_shared/jeu/**/*", "scripts/**/*", "tests/**/*", "vite.config.ts"]
 }
