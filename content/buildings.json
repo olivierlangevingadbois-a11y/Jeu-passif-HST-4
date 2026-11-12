@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "buildings": [
+    {
+      "id": "terre_censitaire",
+      "era": "prologue",
+      "name": "Terre du censitaire",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "habitants"
+      },
+      "description": "Dans le régime seigneurial, le seigneur concède des terres aux censitaires. Ces terres longues et étroites, perpendiculaires au fleuve, forment des rangs. En échange, le censitaire paie chaque année le cens et les rentes.",
+      "upgrades": [
+        {
+          "id": "defrichement",
+          "name": "Défrichement",
+          "note": "Les censitaires abattent la forêt pour agrandir la surface cultivable de leur terre."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "moulin_banal",
+      "era": "prologue",
+      "name": "Moulin banal",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "production"
+      },
+      "description": "Le seigneur doit construire un moulin où les censitaires sont obligés de faire moudre leur grain : c'est le droit de banalité. En paiement, le seigneur garde une partie de la farine, habituellement le quatorzième minot.",
+      "upgrades": [
+        {
+          "id": "moulin_a_eau",
+          "name": "Moulin à eau",
+          "note": "La plupart des moulins seigneuriaux utilisent la force d'une rivière pour faire tourner la meule."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "manoir_seigneurial",
+      "era": "prologue",
+      "name": "Manoir seigneurial",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "argent"
+      },
+      "description": "Le seigneur habite le manoir. Il y perçoit chaque année le cens et les rentes de ses censitaires, souvent en argent et en produits de la ferme.",
+      "upgrades": [
+        {
+          "id": "corvee",
+          "name": "Corvée",
+          "note": "Les censitaires doivent au seigneur quelques jours de travail gratuit par année."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "eglise_paroissiale",
+      "era": "prologue",
+      "name": "Église paroissiale",
+      "monument": true,
+      "effect": {
+        "kind": "cap",
+        "target": "habitants"
+      },
+      "description": "La paroisse est au cœur de la vie des habitants. Le curé tient les registres des baptêmes, des mariages et des sépultures, et l'Église catholique joue un grand rôle en éducation et en santé.",
+      "upgrades": [
+        {
+          "id": "fabrique",
+          "name": "Fabrique",
+          "note": "La fabrique, dirigée par des marguilliers élus, gère les biens de la paroisse, comme l'église et le cimetière."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "lot_colonisation",
+      "era": "epoque_1",
+      "name": "Lot de colonisation",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "habitants"
+      },
+      "description": "Au 19e siècle, les terres des vieilles paroisses ne suffisent plus pour les familles nombreuses. Le clergé et le gouvernement encouragent la colonisation de nouvelles régions, comme l'arrière-pays du Bas-Saint-Laurent, pour freiner l'exode vers les États-Unis.",
+      "upgrades": [
+        {
+          "id": "chemins_colonisation",
+          "name": "Chemins de colonisation",
+          "note": "Le gouvernement ouvre des chemins pour donner accès aux nouvelles régions de colonisation."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "scierie_chantier",
+      "era": "epoque_1",
+      "name": "Scierie et chantier forestier",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "production"
+      },
+      "description": "Le bois devient la principale exportation de la colonie. L'hiver, les bûcherons coupent les arbres dans les chantiers. Au printemps, les draveurs font descendre les billots sur les rivières jusqu'aux scieries.",
+      "upgrades": [
+        {
+          "id": "scierie_vapeur",
+          "name": "Scierie à vapeur",
+          "note": "La machine à vapeur permet d'installer des scieries plus puissantes, sans dépendre uniquement de la force de l'eau."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "beurrerie_fromagerie",
+      "era": "epoque_1",
+      "name": "Beurrerie-fromagerie",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "production"
+      },
+      "description": "À la fin du 19e siècle, les agriculteurs se tournent vers l'industrie laitière. Les beurreries et les fromageries se multiplient dans les paroisses et une partie de la production est exportée vers la Grande-Bretagne.",
+      "upgrades": [
+        {
+          "id": "ecole_laiterie",
+          "name": "École de laiterie",
+          "note": "En 1892, une école de laiterie ouvre à Saint-Hyacinthe pour former les fabricants de beurre et de fromage."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "magasin_general",
+      "era": "epoque_1",
+      "name": "Magasin général",
+      "monument": false,
+      "effect": {
+        "kind": "produce",
+        "target": "argent"
+      },
+      "description": "Le magasin général vend de tout : tissus, outils, sucre, mélasse, tabac. C'est aussi un lieu de rencontre où l'on échange les nouvelles de la paroisse.",
+      "upgrades": [
+        {
+          "id": "credit_marchand",
+          "name": "Crédit du marchand",
+          "note": "Le marchand fait souvent crédit aux familles, qui le remboursent après les récoltes."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "gare",
+      "era": "epoque_1",
+      "name": "Gare",
+      "monument": true,
+      "effect": {
+        "kind": "multiplier",
+        "target": "argent"
+      },
+      "description": "Le chemin de fer relie la paroisse aux villes et aux ports. Le Grand Tronc atteint Rivière-du-Loup en 1860. Les marchandises et les voyageurs circulent beaucoup plus vite qu'en charrette ou en goélette.",
+      "upgrades": [
+        {
+          "id": "intercolonial",
+          "name": "Intercolonial",
+          "note": "Achevé en 1876, l'Intercolonial relie le Québec aux provinces maritimes en passant par le Bas-Saint-Laurent."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "ecole_rang",
+      "era": "epoque_1",
+      "name": "École de rang",
+      "monument": false,
+      "effect": {
+        "kind": "archives_bonus",
+        "target": null
+      },
+      "description": "L'école de rang accueille les enfants d'un même rang dans une seule classe. Beaucoup d'enfants la fréquentent seulement quelques années, car leur aide est nécessaire à la ferme.",
+      "upgrades": [
+        {
+          "id": "loi_scolaire_1846",
+          "name": "Loi scolaire de 1846",
+          "note": "Cette loi crée les commissions scolaires et permet de percevoir des taxes pour financer les écoles."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    }
+  ]
+}

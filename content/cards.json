@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "cards": [
+    {
+      "id": "meunier",
+      "era": "prologue",
+      "name": "Meunier",
+      "type": "figure",
+      "rarity": "commune",
+      "effect": {
+        "kind": "multiplier",
+        "target": "moulin_banal"
+      },
+      "effectText": "Production du moulin banal augmentée",
+      "synergy": null,
+      "bio": "Le meunier fait fonctionner le moulin du seigneur. Il moud le grain des censitaires et prélève la part due au seigneur.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "habitante",
+      "era": "prologue",
+      "name": "Habitante",
+      "type": "figure",
+      "rarity": "rare",
+      "effect": {
+        "kind": "multiplier",
+        "target": "habitants"
+      },
+      "effectText": "Croissance des habitants augmentée",
+      "synergy": null,
+      "bio": "Sur la terre familiale, l'habitante travaille aux champs, s'occupe du potager et des animaux, transforme les aliments et fabrique une grande partie des vêtements. Les familles sont nombreuses et chaque membre contribue au travail.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "louis_joseph_papineau",
+      "era": "prologue",
+      "name": "Louis-Joseph Papineau",
+      "type": "personnage",
+      "rarity": "epique",
+      "effect": {
+        "kind": "heritage_gain",
+        "target": null
+      },
+      "effectText": "Héritage gagné au passage d'époque augmenté",
+      "synergy": null,
+      "bio": "Président de la Chambre d'assemblée du Bas-Canada pendant de nombreuses années, Papineau est le chef du Parti patriote. En 1834, les 92 Résolutions réclament notamment plus de pouvoir pour l'assemblée élue. Après les rébellions de 1837, il s'exile aux États-Unis, puis en France.",
+      "source": "Dictionnaire biographique du Canada, notice PAPINEAU, LOUIS-JOSEPH",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "colon_defricheur",
+      "era": "epoque_1",
+      "name": "Colon défricheur",
+      "type": "figure",
+      "rarity": "commune",
+      "effect": {
+        "kind": "multiplier",
+        "target": "lot_colonisation"
+      },
+      "effectText": "Production des lots de colonisation augmentée",
+      "synergy": null,
+      "bio": "Le colon s'installe sur un lot de forêt dans une nouvelle région. Il doit abattre les arbres, brûler les souches et bâtir sa maison avant de pouvoir cultiver. Plusieurs colons travaillent aussi l'hiver dans les chantiers forestiers pour gagner un revenu.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "fermiere_laitiere",
+      "era": "epoque_1",
+      "name": "Fermière laitière",
+      "type": "figure",
+      "rarity": "commune",
+      "effect": {
+        "kind": "multiplier",
+        "target": "beurrerie_fromagerie"
+      },
+      "effectText": "Production des beurreries-fromageries augmentée",
+      "synergy": null,
+      "bio": "Sur la ferme, les femmes s'occupent souvent de la traite des vaches et de la fabrication du beurre. À la fin du 19e siècle, l'industrie laitière se développe et le lait est de plus en plus transformé dans les beurreries et fromageries de paroisse.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "antoine_labelle",
+      "era": "epoque_1",
+      "name": "Antoine Labelle",
+      "type": "personnage",
+      "rarity": "commune",
+      "effect": {
+        "kind": "crisis_mitigation",
+        "target": "exode_nouvelle_angleterre"
+      },
+      "effectText": "Réduit les départs d'habitants pendant l'exode vers la Nouvelle-Angleterre",
+      "synergy": null,
+      "bio": "Curé de Saint-Jérôme, Antoine Labelle fait la promotion de la colonisation des Laurentides à partir des années 1870 pour freiner l'émigration vers les États-Unis. Il devient sous-ministre de l'Agriculture et de la Colonisation en 1888.",
+      "source": "Dictionnaire biographique du Canada, notice LABELLE, FRANÇOIS-XAVIER-ANTOINE",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "draveur",
+      "era": "epoque_1",
+      "name": "Draveur",
+      "type": "figure",
+      "rarity": "rare",
+      "effect": {
+        "kind": "multiplier",
+        "target": "scierie_chantier"
+      },
+      "effectText": "Production des scieries augmentée",
+      "synergy": null,
+      "bio": "Au printemps, le draveur guide les billots de bois sur les rivières jusqu'aux scieries. Le métier est très dangereux : les draveurs sautent d'un billot à l'autre pour défaire les embâcles.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "robert_baldwin",
+      "era": "epoque_1",
+      "name": "Robert Baldwin",
+      "type": "personnage",
+      "rarity": "rare",
+      "effect": {
+        "kind": "multiplier",
+        "target": "argent"
+      },
+      "effectText": "Argent de toutes les sources augmenté",
+      "synergy": {
+        "with": "louis_hippolyte_la_fontaine",
+        "text": "Effet doublé si La Fontaine siège aussi au conseil"
+      },
+      "bio": "Chef réformiste du Canada-Ouest, Baldwin s'allie au réformiste du Canada-Est Louis-Hippolyte La Fontaine. Leur alliance mène à l'obtention de la responsabilité ministérielle en 1848.",
+      "source": "Dictionnaire biographique du Canada, notice BALDWIN, ROBERT",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "louis_hippolyte_la_fontaine",
+      "era": "epoque_1",
+      "name": "Louis-Hippolyte La Fontaine",
+      "type": "personnage",
+      "rarity": "rare",
+      "effect": {
+        "kind": "multiplier",
+        "target": "argent"
+      },
+      "effectText": "Argent de toutes les sources augmenté",
+      "synergy": {
+        "with": "robert_baldwin",
+        "text": "Effet doublé si Baldwin siège aussi au conseil"
+      },
+      "bio": "Chef des réformistes du Canada-Est, La Fontaine s'oppose à l'assimilation visée par l'Acte d'Union. Allié à Robert Baldwin, il forme en 1848 un gouvernement responsable devant l'assemblée élue.",
+      "source": "Dictionnaire biographique du Canada, notice LA FONTAINE, sir LOUIS-HIPPOLYTE",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "guide_wolastoqey",
+      "era": "epoque_1",
+      "name": "Guide wolastoqey",
+      "type": "figure",
+      "rarity": "rare",
+      "effect": {
+        "kind": "multiplier",
+        "target": "production"
+      },
+      "effectText": "Production de toutes les sources augmentée",
+      "synergy": null,
+      "bio": "Les Wolastoqiyik (Malécites) fréquentent depuis des générations le territoire entre le fleuve Saint-Laurent et la rivière Saint-Jean. Leurs routes de portage, comme celle du Témiscouata, sont aussi utilisées par les voyageurs et les colons. Au 19e siècle, une réserve est créée à Viger, près de Cacouna, puis cédée quelques décennies plus tard sous la pression de la colonisation.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "institutrice_rang",
+      "era": "epoque_1",
+      "name": "Institutrice de rang",
+      "type": "figure",
+      "rarity": "epique",
+      "effect": {
+        "kind": "archives_bonus",
+        "target": null
+      },
+      "effectText": "Récompenses des Archives augmentées",
+      "synergy": null,
+      "bio": "Souvent très jeune et peu payée, l'institutrice de rang enseigne à des élèves de tous âges dans une seule classe. Elle vit parfois à l'école même et s'occupe aussi du chauffage et de l'entretien.",
+      "source": null,
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "george_etienne_cartier",
+      "era": "epoque_1",
+      "name": "George-Étienne Cartier",
+      "type": "personnage",
+      "rarity": "epique",
+      "effect": {
+        "kind": "multiplier",
+        "target": "gare"
+      },
+      "effectText": "Bonus de la gare augmenté",
+      "synergy": null,
+      "bio": "Avocat et homme politique, Cartier est l'un des Pères de la Confédération. Il défend le projet de fédération au Canada-Est. Il est aussi lié au développement des chemins de fer, dont le Grand Tronc.",
+      "source": "Dictionnaire biographique du Canada, notice CARTIER, sir GEORGE-ÉTIENNE",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "louis_riel",
+      "era": "epoque_1",
+      "name": "Louis Riel",
+      "type": "personnage",
+      "rarity": "epique",
+      "effect": {
+        "kind": "heritage_gain",
+        "target": null
+      },
+      "effectText": "Héritage gagné au passage d'époque augmenté",
+      "synergy": null,
+      "bio": "Chef métis, Louis Riel dirige la résistance de la rivière Rouge (1869-1870), qui mène à la création du Manitoba. En 1885, il participe à la résistance du Nord-Ouest. Sa pendaison, la même année, provoque une vive réaction au Québec et nourrit le nationalisme canadien-français.",
+      "source": "Dictionnaire biographique du Canada, notice RIEL, LOUIS (1844-1885)",
+      "validated": true,
+      "teacherNote": null
+    }
+  ]
+}

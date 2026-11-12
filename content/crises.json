@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "crises": [
+    {
+      "id": "cholera_1832",
+      "era": "prologue",
+      "scope": "solo",
+      "name": "L'épidémie de choléra",
+      "year": 1832,
+      "description": "Une épidémie de choléra arrive avec les navires d'immigrants. Malgré la quarantaine, la maladie se répand dans la colonie.",
+      "penalty": {
+        "kind": "growth_reduction",
+        "target": "habitants"
+      },
+      "mitigations": [
+        {
+          "kind": "resources",
+          "ref": "argent"
+        },
+        {
+          "kind": "archives",
+          "ref": null
+        }
+      ],
+      "aftermath": "La station de quarantaine de Grosse-Île, ouverte en 1832, n'empêche pas l'épidémie de faire des milliers de morts, surtout à Québec et à Montréal. D'autres épidémies frappent dans les années suivantes. L'épidémie de 1832 alimente aussi les tensions politiques : des patriotes accusent les autorités britanniques d'avoir laissé entrer la maladie avec l'immigration.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "exode_nouvelle_angleterre",
+      "era": "epoque_1",
+      "scope": "solo",
+      "name": "L'exode vers la Nouvelle-Angleterre",
+      "year": null,
+      "description": "Les terres manquent dans les vieilles paroisses et les familles sont nombreuses. Des habitants partent travailler dans les manufactures de textile de la Nouvelle-Angleterre.",
+      "penalty": {
+        "kind": "habitants_loss",
+        "target": "habitants"
+      },
+      "mitigations": [
+        {
+          "kind": "building",
+          "ref": "lot_colonisation"
+        },
+        {
+          "kind": "card",
+          "ref": "antoine_labelle"
+        },
+        {
+          "kind": "archives",
+          "ref": "emigration"
+        }
+      ],
+      "aftermath": "Entre 1850 et 1890, plus de 400 000 Canadiens français émigrent aux États-Unis. Pour freiner ces départs, le clergé et le gouvernement encouragent la colonisation de nouvelles régions.",
+      "validated": true,
+      "teacherNote": null
+    }
+  ]
+}

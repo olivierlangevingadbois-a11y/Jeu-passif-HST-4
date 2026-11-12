@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "eras": [
+    {
+      "id": "prologue",
+      "order": 0,
+      "name": "Prologue : la seigneurie",
+      "period": {
+        "start": null,
+        "end": 1840
+      },
+      "programTitle": "Révision de 3e secondaire : de la Nouvelle-France aux luttes nationales",
+      "townStage": "Seigneurie",
+      "intro": "Ta paroisse commence comme une seigneurie le long du fleuve. Les censitaires défrichent leurs terres, le moulin tourne et l'église rassemble les habitants.",
+      "monumentBuildingId": "eglise_paroissiale",
+      "milestone": {
+        "id": "acte_union",
+        "name": "L'Acte d'Union",
+        "year": 1840,
+        "eventText": "Après les rébellions de 1837-1838, Londres envoie lord Durham enquêter sur la situation. Son rapport recommande d'unir le Haut-Canada et le Bas-Canada. L'Acte d'Union est adopté en 1840 et entre en vigueur en 1841 : le Canada-Uni est créé."
+      },
+      "recensementFacts": [
+        {
+          "id": "rec_talon_1666",
+          "text": "En 1666, l'intendant Jean Talon organise le premier recensement de la Nouvelle-France. Il compte environ 3 200 habitants."
+        },
+        {
+          "id": "rec_nf_source",
+          "text": "Les recensements de la Nouvelle-France notent le nom, l'âge et le métier des habitants. Ils sont aujourd'hui une source précieuse pour les historiens et les généalogistes."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "epoque_1",
+      "order": 1,
+      "name": "Époque 1 : la paroisse rurale",
+      "period": {
+        "start": 1840,
+        "end": 1896
+      },
+      "programTitle": "La formation du régime fédéral canadien (1840-1896)",
+      "townStage": "Paroisse rurale",
+      "intro": "Le Canada-Uni est créé. Ta paroisse grandit au rythme de la colonisation, du commerce du bois et de l'arrivée du chemin de fer, pendant que se prépare une nouvelle constitution : la Confédération.",
+      "monumentBuildingId": "gare",
+      "milestone": {
+        "id": "election_laurier",
+        "name": "L'élection de Wilfrid Laurier",
+        "year": 1896,
+        "eventText": "En 1896, le libéral Wilfrid Laurier remporte les élections fédérales et devient le premier francophone à diriger le gouvernement du Canada. Une nouvelle époque commence, marquée par l'industrialisation et les débats sur la place du Canada dans l'Empire britannique."
+      },
+      "recensementFacts": [
+        {
+          "id": "rec_1871",
+          "text": "En 1871 a lieu le premier recensement du Canada après la Confédération. Depuis, le pays est recensé au moins tous les 10 ans."
+        },
+        {
+          "id": "rec_natalite",
+          "text": "Les recensements du 19e siècle montrent la croissance rapide de la population canadienne-française, liée à un taux de natalité très élevé."
+        }
+      ],
+      "validated": true,
+      "teacherNote": null
+    }
+  ]
+}

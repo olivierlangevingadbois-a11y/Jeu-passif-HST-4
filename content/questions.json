@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "pro_q01",
+      "era": "prologue",
+      "concept": "regime-seigneurial",
+      "type": "quiz",
+      "prompt": "Dans le régime seigneurial, comment appelle-t-on la personne qui reçoit une terre du seigneur ?",
+      "choices": [
+        "Le censitaire",
+        "L'intendant",
+        "Le coureur des bois",
+        "Le marguillier"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le censitaire reçoit une terre du seigneur. En échange, il paie chaque année le cens et les rentes et respecte certaines obligations, comme la banalité et la corvée.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "pro_q02",
+      "era": "prologue",
+      "concept": "regime-seigneurial",
+      "type": "quiz",
+      "prompt": "Qu'est-ce que le droit de banalité ?",
+      "choices": [
+        "L'obligation de faire moudre son grain au moulin du seigneur",
+        "Une taxe payée directement au roi de France",
+        "Le droit de chasser sur les terres du seigneur",
+        "L'obligation d'assister à la messe chaque dimanche"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le droit de banalité oblige les censitaires à faire moudre leur grain au moulin du seigneur, qui garde une partie de la farine en paiement.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "pro_q03",
+      "era": "prologue",
+      "concept": "changements-constitutionnels",
+      "type": "chronologie",
+      "prompt": "Place ces événements dans l'ordre chronologique.",
+      "events": [
+        {
+          "text": "Traité de Paris : la Nouvelle-France est cédée à la Grande-Bretagne",
+          "year": 1763
+        },
+        {
+          "text": "Acte de Québec",
+          "year": 1774
+        },
+        {
+          "text": "Acte constitutionnel : création du Haut-Canada et du Bas-Canada",
+          "year": 1791
+        },
+        {
+          "text": "Adoption des 92 Résolutions",
+          "year": 1834
+        },
+        {
+          "text": "Acte d'Union",
+          "year": 1840
+        }
+      ],
+      "explanation": "En moins de 80 ans, le territoire connaît quatre constitutions : la Proclamation royale (1763), l'Acte de Québec (1774), l'Acte constitutionnel (1791) et l'Acte d'Union (1840).",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "pro_q04",
+      "era": "prologue",
+      "concept": "luttes-nationales",
+      "type": "quisuisje",
+      "clues": [
+        "Je suis le chef du Parti patriote.",
+        "J'ai présidé la Chambre d'assemblée du Bas-Canada pendant de nombreuses années.",
+        "Après les rébellions de 1837, je m'exile aux États-Unis, puis en France."
+      ],
+      "choices": [
+        "Louis-Joseph Papineau",
+        "Louis-Hippolyte La Fontaine",
+        "Lord Durham",
+        "George-Étienne Cartier"
+      ],
+      "answerIndex": 0,
+      "explanation": "Louis-Joseph Papineau dirige le Parti patriote, qui réclame plus de pouvoir pour l'assemblée élue, notamment dans les 92 Résolutions de 1834.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "pro_q05",
+      "era": "prologue",
+      "concept": "luttes-nationales",
+      "type": "quiz",
+      "prompt": "Que recommande le rapport Durham, déposé en 1839 ?",
+      "choices": [
+        "L'union du Haut-Canada et du Bas-Canada",
+        "L'indépendance du Bas-Canada",
+        "L'annexion du Canada aux États-Unis",
+        "Le retour du régime français"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lord Durham recommande d'unir les deux Canadas et d'accorder la responsabilité ministérielle. Il souhaite aussi l'assimilation des Canadiens français à la majorité anglophone. Londres retient l'union, mais pas tout de suite le gouvernement responsable.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q01",
+      "era": "epoque_1",
+      "concept": "gouvernement-responsable",
+      "type": "quiz",
+      "prompt": "En quelle année le gouvernement responsable est-il obtenu au Canada-Uni ?",
+      "choices": [
+        "1848",
+        "1840",
+        "1867",
+        "1791"
+      ],
+      "answerIndex": 0,
+      "explanation": "En 1848, le gouverneur Elgin confie le pouvoir à La Fontaine et Baldwin, chefs de la majorité à l'assemblée. Le gouvernement doit désormais avoir l'appui des élus pour gouverner.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q02",
+      "era": "epoque_1",
+      "concept": "changements-constitutionnels",
+      "type": "chronologie",
+      "prompt": "Place ces événements dans l'ordre chronologique.",
+      "events": [
+        {
+          "text": "Obtention du gouvernement responsable",
+          "year": 1848
+        },
+        {
+          "text": "Abolition du régime seigneurial",
+          "year": 1854
+        },
+        {
+          "text": "Confédération canadienne",
+          "year": 1867
+        },
+        {
+          "text": "Pendaison de Louis Riel",
+          "year": 1885
+        },
+        {
+          "text": "Élection de Wilfrid Laurier",
+          "year": 1896
+        }
+      ],
+      "explanation": "Ces événements marquent la période 1840-1896 : on passe du Canada-Uni à une fédération, et les tensions entre francophones et anglophones nourrissent le nationalisme canadien-français.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q03",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "quiz",
+      "prompt": "Quelle loi crée le Dominion du Canada en 1867 ?",
+      "choices": [
+        "L'Acte de l'Amérique du Nord britannique",
+        "L'Acte d'Union",
+        "L'Acte constitutionnel",
+        "La Proclamation royale"
+      ],
+      "answerIndex": 0,
+      "explanation": "L'Acte de l'Amérique du Nord britannique (AANB), adopté par le Parlement britannique, entre en vigueur le 1er juillet 1867. Il crée une fédération avec un gouvernement central et des gouvernements provinciaux.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q04",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "quiz",
+      "prompt": "Quelles provinces forment le Canada en 1867 ?",
+      "choices": [
+        "Ontario, Québec, Nouvelle-Écosse et Nouveau-Brunswick",
+        "Ontario, Québec, Manitoba et Colombie-Britannique",
+        "Québec, Ontario, Île-du-Prince-Édouard et Terre-Neuve",
+        "Québec, Nouveau-Brunswick, Manitoba et Alberta"
+      ],
+      "answerIndex": 0,
+      "explanation": "En 1867, le Canada compte quatre provinces. Le Manitoba s'ajoute en 1870, la Colombie-Britannique en 1871 et l'Île-du-Prince-Édouard en 1873.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q05",
+      "era": "epoque_1",
+      "concept": "federalisme",
+      "type": "quiz",
+      "prompt": "Selon la Constitution de 1867, quel palier de gouvernement est responsable de l'éducation ?",
+      "choices": [
+        "Le gouvernement provincial",
+        "Le gouvernement fédéral",
+        "Les municipalités seulement",
+        "Le gouvernement britannique"
+      ],
+      "answerIndex": 0,
+      "explanation": "La Constitution de 1867 partage les compétences entre les deux paliers. L'éducation relève des provinces, tandis que la défense et la monnaie, par exemple, relèvent du fédéral.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q06",
+      "era": "epoque_1",
+      "concept": "emigration",
+      "type": "quiz",
+      "prompt": "Pourquoi de nombreux Canadiens français partent-ils vers la Nouvelle-Angleterre au 19e siècle ?",
+      "choices": [
+        "Pour travailler dans les manufactures de textile",
+        "Pour participer à une ruée vers l'or",
+        "Pour fuir le service militaire obligatoire",
+        "Pour s'établir sur des terres offertes par l'Église"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le manque de terres dans les vieilles paroisses et les familles nombreuses poussent beaucoup de gens à partir. Les manufactures de la Nouvelle-Angleterre offrent du travail et un salaire.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q07",
+      "era": "epoque_1",
+      "concept": "colonisation",
+      "type": "quiz",
+      "prompt": "Quel moyen le clergé et le gouvernement encouragent-ils pour freiner l'émigration vers les États-Unis ?",
+      "choices": [
+        "La colonisation de nouvelles régions",
+        "La fermeture de la frontière américaine",
+        "L'abolition des paroisses rurales",
+        "La construction d'usines à Québec seulement"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le clergé et le gouvernement encouragent l'ouverture de nouvelles régions, comme le Saguenay, les Laurentides ou l'arrière-pays du Bas-Saint-Laurent, pour garder la population au Québec.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q08",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "quisuisje",
+      "clues": [
+        "Je suis l'un des Pères de la Confédération.",
+        "Je défends le projet de fédération au Canada-Est.",
+        "Je suis aussi lié au développement du chemin de fer du Grand Tronc."
+      ],
+      "choices": [
+        "George-Étienne Cartier",
+        "Louis-Joseph Papineau",
+        "Wilfrid Laurier",
+        "Robert Baldwin"
+      ],
+      "answerIndex": 0,
+      "explanation": "George-Étienne Cartier est le principal défenseur de la Confédération au Canada-Est. Il soutient que la fédération protégera les droits des Canadiens français grâce à un gouvernement provincial.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q09",
+      "era": "epoque_1",
+      "concept": "nationalisme",
+      "type": "quisuisje",
+      "clues": [
+        "Je suis un chef métis.",
+        "Je dirige la résistance de la rivière Rouge, qui mène à la création du Manitoba en 1870.",
+        "Ma pendaison en 1885 provoque une vive réaction au Québec."
+      ],
+      "choices": [
+        "Louis Riel",
+        "Antoine Labelle",
+        "George-Étienne Cartier",
+        "Wilfrid Laurier"
+      ],
+      "answerIndex": 0,
+      "explanation": "La pendaison de Louis Riel en 1885 divise le pays : plusieurs francophones y voient une injustice, alors que beaucoup d'anglophones l'approuvent. L'événement nourrit le nationalisme canadien-français.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q10",
+      "era": "epoque_1",
+      "concept": "regime-seigneurial",
+      "type": "quiz",
+      "prompt": "En quelle année le régime seigneurial est-il aboli ?",
+      "choices": [
+        "1854",
+        "1763",
+        "1840",
+        "1867"
+      ],
+      "answerIndex": 0,
+      "explanation": "La loi de 1854 abolit les droits seigneuriaux. Les censitaires peuvent racheter leurs terres, mais plusieurs continuent de payer une rente pendant des décennies.",
+      "validated": true,
+      "teacherNote": null
+    },
+    {
+      "id": "e1_q11",
+      "era": "epoque_1",
+      "concept": "chemin-de-fer",
+      "type": "quiz",
+      "prompt": "Quel chemin de fer, achevé en 1876, relie le Québec aux provinces maritimes ?",
+      "choices": [
+        "L'Intercolonial",
+        "Le Canadien Pacifique",
+        "Le Grand Tronc",
+        "Le Transcontinental"
+      ],
+      "answerIndex": 0,
+      "explanation": "La construction de l'Intercolonial était une condition de l'entrée de la Nouvelle-Écosse et du Nouveau-Brunswick dans la Confédération. Il passe par le Bas-Saint-Laurent.",
+      "validated": true,
+      "teacherNote": null
+    }
+  ]
+}
