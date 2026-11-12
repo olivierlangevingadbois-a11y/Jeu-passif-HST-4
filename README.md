@@ -35,6 +35,8 @@ npm run dev
 | `npm test` | Tests du moteur de jeu. |
 | `npm run simuler` | Estime le temps pour finir chaque époque. |
 | `npm run build` | Construit la version élèves (contenu validé seulement). |
+| `npm run test:sql` | Teste les règles de sécurité de la base sur un Postgres local. |
+| `npm run test:integration` | Test de bout en bout contre un Supabase local ou de test (jamais la production). |
 
 ## Organisation du code
 
