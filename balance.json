@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "simulation": { "stepSeconds": 10 },
+  "sync": { "intervalSeconds": 60 },
+  "offline": { "capHours": 8, "efficiency": 1.0, "thresholdSeconds": 300 },
+  "habitants": { "baseCap": 20, "productionBonusPerHabitant": 0.01, "argentPerHabitant": 0.1 },
+  "productionToArgent": 0.5,
+  "eras": {
+    "prologue": {
+      "startingArgent": 15,
+      "startingHabitants": 5,
+      "startingBuildings": { "terre_censitaire": 1 },
+      "milestone": { "habitants": 60, "productionTotal": 3000 },
+      "recensement": { "minHabitants": 30 }
+    },
+    "epoque_1": {
+      "startingArgent": 50,
+      "startingHabitants": 10,
+      "startingBuildings": { "lot_colonisation": 1 },
+      "milestone": { "habitants": 2000, "productionTotal": 50000000 },
+      "recensement": { "minHabitants": 150 }
+    }
+  },
+  "buildings": {
+    "terre_censitaire": { "unlockHabitants": 0, "baseCost": 10, "costGrowth": 1.15, "ratePerLevel": 0.1 },
+    "moulin_banal": { "unlockHabitants": 8, "baseCost": 25, "costGrowth": 1.15, "ratePerLevel": 0.6 },
+    "manoir_seigneurial": { "unlockHabitants": 15, "baseCost": 60, "costGrowth": 1.17, "ratePerLevel": 0.5 },
+    "eglise_paroissiale": { "unlockHabitants": 12, "baseCost": 40, "costGrowth": 1.35, "capPerLevel": 15 },
+    "lot_colonisation": { "unlockHabitants": 0, "baseCost": 40, "costGrowth": 1.14, "ratePerLevel": 0.05 },
+    "scierie_chantier": { "unlockHabitants": 15, "baseCost": 100, "costGrowth": 1.15, "ratePerLevel": 2 },
+    "beurrerie_fromagerie": { "unlockHabitants": 120, "baseCost": 5000, "costGrowth": 1.16, "ratePerLevel": 30 },
+    "magasin_general": { "unlockHabitants": 40, "baseCost": 600, "costGrowth": 1.16, "ratePerLevel": 4 },
+    "gare": { "unlockHabitants": 300, "baseCost": 50000, "costGrowth": 1.6, "multiplierPerLevel": 0.15 },
+    "ecole_rang": { "unlockHabitants": 80, "baseCost": 3000, "costGrowth": 1.5, "archivesBonusPerLevel": 0.1 }
+  },
+  "upgrades": {
+    "defrichement": { "cost": 150, "requiresLevel": 10, "multiplier": 2 },
+    "moulin_a_eau": { "cost": 300, "requiresLevel": 10, "multiplier": 2 },
+    "corvee": { "cost": 600, "requiresLevel": 5, "multiplier": 2 },
+    "fabrique": { "cost": 400, "requiresLevel": 3, "multiplier": 1.5 },
+    "chemins_colonisation": { "cost": 20000, "requiresLevel": 25, "multiplier": 2 },
+    "scierie_vapeur": { "cost": 40000, "requiresLevel": 25, "multiplier": 2 },
+    "ecole_laiterie": { "cost": 400000, "requiresLevel": 15, "multiplier": 2 },
+    "credit_marchand": { "cost": 60000, "requiresLevel": 15, "multiplier": 2 },
+    "intercolonial": { "cost": 2000000, "requiresLevel": 5, "multiplier": 2 },
+    "loi_scolaire_1846": { "cost": 50000, "requiresLevel": 5, "multiplier": 1.5 }
+  },
+  "recensement": { "coefficient": 0.5, "divisor": 50 },
+  "heritage": { "coefficient": 1, "divisor": 1000, "recensementWeight": 0.5, "minimum": 1 },
+  "heritageTree": [
+    { "id": "production_1", "cost": 3, "requires": null, "effect": { "kind": "multiplier", "target": "production", "value": 0.25 } },
+    { "id": "habitants_1", "cost": 3, "requires": null, "effect": { "kind": "multiplier", "target": "habitants", "value": 0.25 } },
+    { "id": "argent_1", "cost": 3, "requires": null, "effect": { "kind": "starting_argent", "value": 200 } },
+    { "id": "absence_1", "cost": 8, "requires": "production_1", "effect": { "kind": "offline_hours", "value": 2 } },
+    { "id": "archives_1", "cost": 8, "requires": "habitants_1", "effect": { "kind": "archives_bonus", "value": 0.25 } },
+    { "id": "production_2", "cost": 20, "requires": "absence_1", "effect": { "kind": "multiplier", "target": "production", "value": 0.5 } },
+    { "id": "habitants_2", "cost": 20, "requires": "archives_1", "effect": { "kind": "multiplier", "target": "habitants", "value": 0.5 } },
+    { "id": "conseil_4", "cost": 30, "requires": "production_2", "effect": { "kind": "conseil_slot", "value": 1 } },
+    { "id": "absence_2", "cost": 40, "requires": "production_2", "effect": { "kind": "offline_hours", "value": 4 } },
+    { "id": "heritage_1", "cost": 50, "requires": "habitants_2", "effect": { "kind": "heritage_gain", "value": 0.25 } },
+    { "id": "conseil_5", "cost": 120, "requires": "conseil_4", "effect": { "kind": "conseil_slot", "value": 1 } }
+  ],
+  "conseil": { "baseSlots": 3, "maxSlots": 5 },
+  "cards": {
+    "rarityPower": { "commune": 0.15, "rare": 0.3, "epique": 0.6 },
+    "outOfEraFactor": 0.5,
+    "levelBonus": 0.25,
+    "maxLevel": 5,
+    "synergyFactor": 2,
+    "overrides": {}
+  },
+  "packs": {
+    "costVoix": 10,
+    "size": 3,
+    "odds": { "commune": 0.75, "rare": 0.2, "epique": 0.05 },
+    "guaranteeAtLeast": "rare",
+    "pityPacks": 10,
+    "duplicateFragments": { "commune": 5, "rare": 15, "epique": 50 },
+    "levelUpFragments": [10, 20, 40, 80],
+    "buyCardFragments": { "commune": 50, "rare": 150, "epique": 400 },
+    "freePacksOnPassage": 1,
+    "archivesPackChance": 0.05
+  },
+  "archives": {
+    "maxCharges": 3,
+    "rechargeMinutes": 60,
+    "rewards": {
+      "boost": { "multiplier": 2, "minutes": 15 },
+      "heritage": 1,
+      "fragments": 5
+    },
+    "pastEraShare": 0.2,
+    "correctRepeatWeight": 0.25
+  },
+  "crises": {
+    "cholera_1832": { "triggerHabitants": 25, "durationMinutes": 3, "strength": 0.5, "mitigationStrength": 0.5, "mitigationArgent": 50 },
+    "exode_nouvelle_angleterre": { "triggerHabitants": 400, "durationMinutes": 120, "strength": 0.3, "mitigationStrength": 0.4, "mitigationArgent": 100000 }
+  },
+  "tutorial": { "freeCardId": "meunier" }
+}

@@ -1,0 +1,26 @@
+# Vérifie le contenu, les tests et la compilation à chaque modification.
+name: Vérification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Contenu et balance
+        run: npm run verifier
+      - name: Tests du moteur
+        run: npm test
+      - name: Types
+        run: npm run check
+      - name: Compilation
+        run: npm run build

@@ -1,0 +1,118 @@
+/* Thème provisoire : couleurs chaudes de village, contrastes lisibles. Le pixel art viendra plus tard. */
+:root {
+  --fond: #f4ecd8;
+  --fond-2: #fbf6ea;
+  --encre: #2b2118;
+  --encre-douce: #6a5a48;
+  --bord: #d8c9a8;
+  --accent: #2f4f3a;
+  --accent-clair: #dce8d6;
+  --accent-texte: #ffffff;
+  --alerte: #a33d2a;
+  --alerte-fond: #f7dcd3;
+  --or: #b8862b;
+  --fleuve: #3b6ea5;
+  --commune: #6f7a80;
+  --rare: #2f6fb3;
+  --epique: #7a3fa0;
+  --ombre: 0 2px 0 rgba(43, 33, 24, 0.15);
+  --rayon: 6px;
+  color-scheme: light;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--encre);
+  background: var(--fond);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #1d1a16;
+    --fond-2: #27231d;
+    --encre: #efe6d4;
+    --encre-douce: #b9ab94;
+    --bord: #4a4136;
+    --accent: #7fb08f;
+    --accent-clair: #2c3b30;
+    --accent-texte: #10180f;
+    --alerte: #f08a72;
+    --alerte-fond: #3d231c;
+    --or: #e0b45c;
+    --fleuve: #6d9fd6;
+    --commune: #a6b0b5;
+    --rare: #6fa8e8;
+    --epique: #c18ae6;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--fond); }
+body { overscroll-behavior-y: contain; }
+#app { min-height: 100vh; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.5rem; }
+h1 { font-size: 1.35rem; }
+h2 { font-size: 1.15rem; }
+h3 { font-size: 1rem; }
+p { margin: 0 0 0.6rem; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-texte);
+  border-radius: var(--rayon);
+  padding: 0.5rem 0.9rem;
+  min-height: 44px;
+  box-shadow: var(--ombre);
+  font-weight: 600;
+}
+button:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+button.secondaire { background: transparent; color: var(--accent); }
+button.danger { background: var(--alerte); border-color: var(--alerte); color: #fff; }
+button.petit { min-height: 36px; padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--or); outline-offset: 2px; }
+
+input, select, textarea {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 2px solid var(--bord);
+  border-radius: var(--rayon);
+  background: var(--fond-2);
+  color: var(--encre);
+  min-height: 44px;
+  width: 100%;
+}
+label { display: block; font-weight: 600; margin: 0.6rem 0 0.25rem; }
+
+.carte-ui {
+  background: var(--fond-2);
+  border: 2px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 0.8rem;
+  box-shadow: var(--ombre);
+}
+.pile > * + * { margin-top: 0.75rem; }
+.ligne { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.espace { justify-content: space-between; }
+.doux { color: var(--encre-douce); }
+.petit-texte { font-size: 0.85rem; }
+.brouillon {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--or);
+  color: #fff;
+  padding: 0 0.35rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.barre { height: 10px; background: var(--bord); border-radius: 5px; overflow: hidden; }
+.barre > span { display: block; height: 100%; background: var(--accent); transition: width 0.3s; }
+.pixel { image-rendering: pixelated; shape-rendering: crispEdges; }
+.visuellement-cache {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}

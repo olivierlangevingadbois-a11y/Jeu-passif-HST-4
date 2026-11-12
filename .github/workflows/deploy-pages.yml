@@ -1,0 +1,65 @@
+# Publie le jeu sur GitHub Pages à chaque fusion dans main.
+#
+#   https://<compte>.github.io/<dépôt>/       version élèves : contenu validé seulement, projet Supabase « prod »
+#   https://<compte>.github.io/<dépôt>/test/  version d'essai : brouillons visibles, projet Supabase « test »
+#
+# Sans variables Supabase, chaque version tourne en « mode local » (sauvegarde sur l'appareil).
+name: Publication GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verifier
+      - run: npm test
+      - name: Version d'essai (brouillons, projet test)
+        run: |
+          npm run donnees -- --brouillons
+          npx vite build --outDir ../dist-test
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/test/
+          VITE_SUPABASE_URL: ${{ vars.TEST_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.TEST_SUPABASE_PUBLISHABLE_KEY }}
+      - name: Version élèves (contenu validé, projet prod)
+        run: |
+          npm run donnees
+          npx vite build
+          mv dist-test dist/test
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+          VITE_SUPABASE_URL: ${{ vars.PROD_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.PROD_SUPABASE_PUBLISHABLE_KEY }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  publier:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4
