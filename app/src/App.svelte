@@ -9,6 +9,7 @@
   import Confidentialite from './ecrans/Confidentialite.svelte';
   import Connexion from './ecrans/Connexion.svelte';
   import Enseignant from './ecrans/Enseignant.svelte';
+  import Contenu from './ecrans/Contenu.svelte';
   import { NOM_JEU } from './lib/textes.ts';
 
   let partie = $state<Partie | null>(null);
@@ -44,6 +45,8 @@
 
 {#if routeur.route === 'confidentialite'}
   <Confidentialite retour={() => routeur.aller('jeu')} />
+{:else if routeur.route === 'contenu'}
+  <Contenu />
 {:else if routeur.route === 'enseignant'}
   <Enseignant />
 {:else if partie && partie.affiche && !partie.sessionExpiree}

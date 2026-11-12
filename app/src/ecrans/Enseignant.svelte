@@ -81,6 +81,7 @@
   <header class="ligne espace">
     <h1>Espace enseignant</h1>
     <div class="ligne">
+      <a href="#/contenu">Contenu historique</a>
       <a href="#/">Retour au jeu</a>
       {#if etat === 'pret'}<button class="secondaire petit" onclick={quitter}>Se déconnecter</button>{/if}
     </div>

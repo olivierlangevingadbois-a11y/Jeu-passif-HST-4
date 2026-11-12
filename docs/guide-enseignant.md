@@ -32,6 +32,8 @@ Onglet **Fin d'année** : efface le groupe et toutes les données de ses élève
 
 Tout le texte historique est dans `content/*.json` (voir `content/SCHEMA.md`).
 
+Pour relire confortablement, ouvre la page **Contenu historique** de la version d'essai (`.../test/#/contenu`) : les brouillons y sont affichés en premier, avec la note qui dit quoi vérifier et la bonne réponse de chaque question.
+
 1. Une entrée nouvelle ou modifiée par Claude porte `"validated": false` et une note dans `teacherNote` qui dit quoi vérifier.
 2. Elle apparaît dans la **version d'essai** avec l'étiquette « Brouillon », mais **pas** dans la version élèves.
 3. Pour la valider : corrige le texte au besoin, mets `"validated": true` et `"teacherNote": null`, puis fusionne dans `main`.
