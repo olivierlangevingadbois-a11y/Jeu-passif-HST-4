@@ -94,6 +94,10 @@
       <h2>{era.name}</h2>
       {#if !era.validated}<span class="brouillon">Brouillon</span>{/if}
     </div>
+    <details class="intro">
+      <summary class="petit-texte">{era.programTitle}</summary>
+      <p class="petit-texte">{era.intro}</p>
+    </details>
     <p class="petit-texte doux">Jalon : {era.milestone.name} ({era.milestone.year})</p>
     <div class="jalon">
       <span class="petit-texte">Habitants {nombre(etat.partie.habitants)} / {nombre(eb.milestone.habitants)}</span>
@@ -152,6 +156,7 @@
       </div>
       {#if !b.validated}<span class="brouillon">Brouillon</span>{/if}
       {#if debloque}
+        <button class="description" class:ouverte={ouvert === b.id} onclick={() => (ouvert = ouvert === b.id ? null : b.id)}>{b.description}</button>
         <p class="petit-texte">{effet(b)}</p>
         {#if b.effect.kind === 'produce' && prochainPalier(jeu, niv) !== null}
           <p class="petit-texte doux">Prochain palier : niveau {prochainPalier(jeu, niv)} (production ×{jeu.balance.paliers.multiplicateur})</p>
@@ -164,7 +169,7 @@
       {/if}
       {#if ouvert === b.id}
         <div class="details">
-          <p>{b.description}</p>
+          {#if !debloque}<p>{b.description}</p>{/if}
           {#each b.upgrades as u (u.id)}
             {@const ub = jeu.balance.upgrades[u.id]}
             {@const achete = etat.partie.upgrades.includes(u.id)}
@@ -174,7 +179,7 @@
                 <p class="petit-texte">✓ {u.note}</p>
               {:else if ub}
                 <p class="petit-texte doux">Effet ×{ub.multiplier}. Demande le niveau {ub.requiresLevel}.</p>
-                <button class="petit" disabled={niv < ub.requiresLevel || etat.partie.argent < ub.cost} onclick={() => partie.agir({ type: 'ameliorer', amelioration: u.id })}>
+                <button class="petit" disabled={niv < ub.requiresLevel || etat.partie.argent < ub.cost} onclick={() => { if (!partie.agir({ type: 'ameliorer', amelioration: u.id })) partie.message(`${u.name} : ${u.note}`); }}>
                   Acheter : {nombre(ub.cost)} argent
                 </button>
               {/if}
@@ -223,6 +228,22 @@
   .batiment.verrouille { opacity: 0.7; }
   .batiment .nom { border: none; box-shadow: none; padding: 0; min-height: 0; font-size: 1.05rem; text-align: left; text-decoration: underline dotted; }
   .batiment > button:last-of-type { width: 100%; }
+  .intro summary { cursor: pointer; color: var(--encre-douce); margin-bottom: 0.3rem; }
+  .intro p { font-style: italic; }
+  .description {
+    all: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.85rem;
+    color: var(--encre-douce);
+    margin: 0.2rem 0 0.3rem;
+    cursor: pointer;
+  }
+  .description.ouverte { display: block; }
+  .description:focus-visible { outline: 3px solid var(--or); }
   .details { margin-top: 0.6rem; border-top: 1px dashed var(--bord); padding-top: 0.6rem; }
   .amelioration { margin-top: 0.5rem; }
   .quantite button { min-width: 3rem; }
