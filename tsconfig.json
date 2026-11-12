@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node", "svelte"],
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": false,
+    "paths": {
+      "@jeu/*": ["./supabase/functions/_shared/jeu/*"],
+      "@donnees/*": ["./supabase/functions/_shared/donnees/*"]
+    }
+  },
+  "exclude": ["scripts/serveur-fonctions-local.ts"],
+  "include": ["app/src/**/*", "supabase/functions/_shared/jeu/**/*", "scripts/**/*", "tests/**/*", "vite.config.ts"]
+}

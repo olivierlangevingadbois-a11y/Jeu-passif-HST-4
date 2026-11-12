@@ -1,0 +1,35 @@
+# Vérifie le contenu, les tests et la compilation à chaque modification.
+name: Vérification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Contenu et balance
+        run: npm run verifier
+      - name: Tests du moteur
+        run: npm test
+      - name: Tests de la base de données (RLS, NIP)
+        run: bash scripts/tester-sql.sh
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Types des edge functions
+        run: |
+          npm run donnees
+          deno check supabase/functions/*/index.ts
+      - name: Types
+        run: npm run check
+      - name: Compilation
+        run: npm run build

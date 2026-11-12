@@ -314,6 +314,318 @@
       "explanation": "La construction de l'Intercolonial était une condition de l'entrée de la Nouvelle-Écosse et du Nouveau-Brunswick dans la Confédération. Il passe par le Bas-Saint-Laurent.",
       "validated": true,
       "teacherNote": null
+    },
+    {
+      "id": "pro_q06",
+      "era": "prologue",
+      "concept": "changements-constitutionnels",
+      "type": "quiz",
+      "prompt": "Quelle constitution crée le Haut-Canada et le Bas-Canada en 1791 ?",
+      "choices": [
+        "L'Acte constitutionnel",
+        "L'Acte de Québec",
+        "L'Acte d'Union",
+        "La Proclamation royale"
+      ],
+      "answerIndex": 0,
+      "explanation": "L'Acte constitutionnel de 1791 divise la Province de Québec en deux colonies, le Haut-Canada et le Bas-Canada, chacune avec une Chambre d'assemblée élue.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "pro_q07",
+      "era": "prologue",
+      "concept": "changements-constitutionnels",
+      "type": "quiz",
+      "prompt": "Quel document de 1774 rétablit les lois civiles françaises dans la Province de Québec ?",
+      "choices": [
+        "L'Acte de Québec",
+        "La Proclamation royale",
+        "L'Acte constitutionnel",
+        "Le Traité de Paris"
+      ],
+      "answerIndex": 0,
+      "explanation": "L'Acte de Québec rétablit les lois civiles françaises, reconnaît le régime seigneurial et permet aux catholiques d'occuper des postes administratifs sans renier leur foi.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "pro_q08",
+      "era": "prologue",
+      "concept": "luttes-nationales",
+      "type": "quiz",
+      "prompt": "Dans quel village les Patriotes remportent-ils une victoire contre l'armée britannique en novembre 1837 ?",
+      "choices": [
+        "Saint-Denis",
+        "Saint-Charles",
+        "Saint-Eustache",
+        "Odelltown"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le 23 novembre 1837, les Patriotes repoussent les troupes britanniques à Saint-Denis. Ils sont toutefois défaits peu après à Saint-Charles, puis à Saint-Eustache en décembre.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "pro_q09",
+      "era": "prologue",
+      "concept": "regime-seigneurial",
+      "type": "quiz",
+      "prompt": "Comment appelle-t-on la redevance annuelle, souvent peu élevée, que le censitaire paie au seigneur en reconnaissance de son autorité ?",
+      "choices": [
+        "Le cens",
+        "La dîme",
+        "La corvée",
+        "La banalité"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le cens est une petite redevance annuelle qui reconnaît l'autorité du seigneur. La rente, plus élevée, s'y ajoute. La dîme, elle, est versée au curé de la paroisse.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q12",
+      "era": "epoque_1",
+      "concept": "changements-constitutionnels",
+      "type": "quiz",
+      "prompt": "Selon le rapport Durham, quel est l'un des buts de l'union du Haut-Canada et du Bas-Canada ?",
+      "choices": [
+        "Assimiler les Canadiens français à la majorité anglophone",
+        "Donner l'indépendance au Bas-Canada",
+        "Rétablir le régime français",
+        "Annexer les deux colonies aux États-Unis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Lord Durham voit dans l'union un moyen de mettre les Canadiens français en minorité et de les assimiler. L'Acte d'Union de 1840 reprend cette idée.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q13",
+      "era": "epoque_1",
+      "concept": "changements-constitutionnels",
+      "type": "quiz",
+      "prompt": "Selon l'Acte d'Union de 1840, dans quelle langue sont rédigés les documents officiels du Parlement du Canada-Uni ?",
+      "choices": [
+        "En anglais seulement",
+        "En français seulement",
+        "En anglais et en français",
+        "Dans la langue choisie par chaque député"
+      ],
+      "answerIndex": 0,
+      "explanation": "L'Acte d'Union fait de l'anglais la seule langue des documents officiels du Parlement. Cette disposition est abolie en 1848, sous la pression de La Fontaine et des réformistes.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q14",
+      "era": "epoque_1",
+      "concept": "gouvernement-responsable",
+      "type": "quiz",
+      "prompt": "Que se passe-t-il à Montréal en 1849, après l'adoption d'une loi qui indemnise des habitants du Bas-Canada pour les pertes subies pendant les rébellions ?",
+      "choices": [
+        "Des émeutiers incendient le parlement",
+        "Le gouverneur dissout l'assemblée",
+        "La capitale déménage à Ottawa le jour même",
+        "Les Patriotes reprennent les armes"
+      ],
+      "answerIndex": 0,
+      "explanation": "Des tories opposés à la loi d'indemnisation mettent le feu au parlement du Canada-Uni, à Montréal, en avril 1849. Le gouverneur Elgin signe tout de même la loi, ce qui confirme le principe du gouvernement responsable.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix. Vérifier aussi la formulation sur la loi d'indemnisation (pertes de 1837-1838)."
+    },
+    {
+      "id": "e1_q15",
+      "era": "epoque_1",
+      "concept": "economie",
+      "type": "quiz",
+      "prompt": "Quel traité, signé en 1854 avec les États-Unis, facilite le commerce des produits naturels comme le bois et les céréales ?",
+      "choices": [
+        "Le traité de réciprocité",
+        "Le traité de Paris",
+        "Le traité de Versailles",
+        "Le traité de Washington"
+      ],
+      "answerIndex": 0,
+      "explanation": "Le traité de réciprocité supprime les droits de douane sur plusieurs produits naturels entre les colonies britanniques et les États-Unis. Les Américains y mettent fin en 1866, ce qui pousse les colonies vers une union économique.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q16",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "chronologie",
+      "prompt": "Place ces événements dans l'ordre chronologique.",
+      "events": [
+        {
+          "text": "Entrée en vigueur de l'Acte d'Union",
+          "year": 1841
+        },
+        {
+          "text": "Signature du traité de réciprocité avec les États-Unis",
+          "year": 1854
+        },
+        {
+          "text": "Conférence de Québec et adoption des 72 résolutions",
+          "year": 1864
+        },
+        {
+          "text": "Création du Dominion du Canada",
+          "year": 1867
+        },
+        {
+          "text": "Entrée du Manitoba dans la Confédération",
+          "year": 1870
+        }
+      ],
+      "explanation": "En une trentaine d'années, on passe du Canada-Uni à une fédération qui s'agrandit vers l'Ouest. La fin de la réciprocité et les besoins en chemins de fer favorisent le projet de Confédération.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q17",
+      "era": "epoque_1",
+      "concept": "economie",
+      "type": "quiz",
+      "prompt": "Quelle politique de John A. Macdonald, adoptée en 1879, hausse les tarifs douaniers pour protéger l'industrie canadienne ?",
+      "choices": [
+        "La Politique nationale",
+        "Le traité de réciprocité",
+        "Le libre-échange",
+        "La Loi sur les Indiens"
+      ],
+      "answerIndex": 0,
+      "explanation": "La Politique nationale combine des tarifs douaniers élevés, la construction d'un chemin de fer transcontinental et le peuplement de l'Ouest. Elle favorise l'industrialisation, surtout en Ontario et dans la région de Montréal.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q18",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "quisuisje",
+      "clues": [
+        "Je suis l'un des Pères de la Confédération.",
+        "Je deviens le premier premier ministre du Canada en 1867.",
+        "En 1879, ma Politique nationale protège l'industrie canadienne par des tarifs douaniers."
+      ],
+      "choices": [
+        "John A. Macdonald",
+        "George Brown",
+        "Wilfrid Laurier",
+        "George-Étienne Cartier"
+      ],
+      "answerIndex": 0,
+      "explanation": "John A. Macdonald, conservateur du Canada-Ouest, s'allie à George-Étienne Cartier pour réaliser la Confédération. Il dirige le gouvernement fédéral pendant la majeure partie de la période 1867-1891.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q19",
+      "era": "epoque_1",
+      "concept": "premieres-nations",
+      "type": "quiz",
+      "prompt": "Quelle loi fédérale de 1876 encadre la vie des Premières Nations et fait des Autochtones des pupilles de l'État ?",
+      "choices": [
+        "La Loi sur les Indiens",
+        "La Politique nationale",
+        "L'Acte d'Union",
+        "La loi scolaire"
+      ],
+      "answerIndex": 0,
+      "explanation": "La Loi sur les Indiens donne au gouvernement fédéral un grand contrôle sur les Premières Nations : statut, réserves, gouvernement des bandes. Elle vise leur assimilation et est encore en vigueur aujourd'hui, avec plusieurs modifications.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix. Vérifier le cadrage, sujet sensible : présentation neutre et exacte."
+    },
+    {
+      "id": "e1_q20",
+      "era": "epoque_1",
+      "concept": "chemin-de-fer",
+      "type": "quiz",
+      "prompt": "Quel chemin de fer, achevé en 1885, relie l'est du Canada à la Colombie-Britannique ?",
+      "choices": [
+        "Le Canadien Pacifique",
+        "L'Intercolonial",
+        "Le Grand Tronc",
+        "Le chemin de fer du Nord"
+      ],
+      "answerIndex": 0,
+      "explanation": "La construction d'un chemin de fer jusqu'au Pacifique était une promesse faite à la Colombie-Britannique lors de son entrée dans la Confédération en 1871. Le Canadien Pacifique est achevé en 1885.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q21",
+      "era": "epoque_1",
+      "concept": "nationalisme",
+      "type": "quisuisje",
+      "clues": [
+        "Je fonde le Parti national après la pendaison de Louis Riel.",
+        "Je deviens premier ministre du Québec en 1887.",
+        "Je défends l'autonomie des provinces face au gouvernement fédéral."
+      ],
+      "choices": [
+        "Honoré Mercier",
+        "Wilfrid Laurier",
+        "Louis-Joseph Papineau",
+        "Antoine Labelle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Honoré Mercier profite de la colère provoquée au Québec par la pendaison de Riel pour former le Parti national. Comme premier ministre, il organise en 1887 une conférence interprovinciale pour défendre l'autonomie provinciale.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix. Vérifier la date de fondation du Parti national (1885) et celle de la conférence interprovinciale (1887)."
+    },
+    {
+      "id": "e1_q22",
+      "era": "epoque_1",
+      "concept": "industrialisation",
+      "type": "quiz",
+      "prompt": "Dans quelle ville se concentre surtout la première phase d'industrialisation au Québec, dans la seconde moitié du 19e siècle ?",
+      "choices": [
+        "Montréal",
+        "Rimouski",
+        "Trois-Rivières",
+        "Gaspé"
+      ],
+      "answerIndex": 0,
+      "explanation": "Montréal profite de son port, du canal de Lachine et des chemins de fer. Des usines de chaussures, de textile et de transformation alimentaire y emploient une main-d'œuvre venue des campagnes.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q23",
+      "era": "epoque_1",
+      "concept": "confederation",
+      "type": "quiz",
+      "prompt": "Quelle conférence de 1864 adopte les 72 résolutions qui servent de base à la Confédération ?",
+      "choices": [
+        "La conférence de Québec",
+        "La conférence de Charlottetown",
+        "La conférence de Londres",
+        "La conférence de Montréal"
+      ],
+      "answerIndex": 0,
+      "explanation": "En septembre 1864, la conférence de Charlottetown lance le projet d'union. En octobre, la conférence de Québec adopte les 72 résolutions. La conférence de Londres (1866-1867) précède l'adoption de l'AANB.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
+    },
+    {
+      "id": "e1_q24",
+      "era": "epoque_1",
+      "concept": "federalisme",
+      "type": "quiz",
+      "prompt": "Selon la Constitution de 1867, quel palier de gouvernement est responsable de la défense ?",
+      "choices": [
+        "Le gouvernement fédéral",
+        "Le gouvernement provincial",
+        "Les municipalités",
+        "Les commissions scolaires"
+      ],
+      "answerIndex": 0,
+      "explanation": "La défense, la monnaie, les postes et le commerce extérieur relèvent du fédéral. Les provinces s'occupent notamment de l'éducation, de la santé et des institutions municipales.",
+      "validated": false,
+      "teacherNote": "Brouillon rédigé par Claude. Vérifier l'exactitude de l'énoncé, de la bonne réponse et de l'explication, puis la pertinence des mauvais choix."
     }
   ]
 }

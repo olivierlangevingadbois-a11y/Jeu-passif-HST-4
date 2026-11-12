@@ -1,0 +1,33 @@
+{
+  "name": "de-la-paroisse-a-la-ville",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "donnees": "node scripts/generer-donnees.ts",
+    "verifier": "node scripts/verifier-contenu.ts",
+    "simuler": "node scripts/simuler-rythme.ts",
+    "dev": "npm run donnees -- --brouillons && vite",
+    "build": "npm run verifier && npm run donnees && vite build",
+    "preview": "vite preview",
+    "test": "npm run donnees -- --brouillons && vitest run",
+    "check": "npm run donnees -- --brouillons && svelte-check --tsconfig ./tsconfig.json",
+    "test:sql": "bash scripts/tester-sql.sh",
+    "test:integration": "node scripts/test-integration.ts"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/node": "22.20.5",
+    "svelte": "5.57.3",
+    "svelte-check": "4.7.8",
+    "typescript": "6.0.3",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
