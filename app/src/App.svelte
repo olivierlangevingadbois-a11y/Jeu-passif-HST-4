@@ -15,6 +15,9 @@
   let erreur = $state<string | null>(null);
 
   async function demarrer(backend: Backend) {
+    partie?.arreter();
+    partie = null;
+    erreur = null;
     const p = new Partie(backend);
     try {
       await p.demarrer();

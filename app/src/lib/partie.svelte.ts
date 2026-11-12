@@ -109,7 +109,7 @@ export class Partie {
     }
     this.enAttente.push(a);
     this.affiche = essai.etat;
-    const importante = action.type === 'recensement' || action.type === 'passage' || action.type === 'heritage_acheter';
+    const importante = ['recensement', 'passage', 'heritage_acheter', 'tutoriel_carte', 'acheter_carte', 'ameliorer_carte'].includes(action.type);
     this.planifier(importante ? 0 : this.backend.mode === 'local' ? 1000 : 15000);
     return null;
   }

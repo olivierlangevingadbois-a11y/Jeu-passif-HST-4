@@ -1,0 +1,12 @@
+# Configuration Supabase CLI (utilisée par GitHub Actions pour déployer).
+project_id = "de-la-paroisse-a-la-ville"
+
+# Les fonctions vérifient elles-mêmes la session (compatible avec les nouvelles clés Supabase).
+[functions.student-login]
+verify_jwt = false
+
+[functions.game-sync]
+verify_jwt = false
+
+[functions.teacher-admin]
+verify_jwt = false

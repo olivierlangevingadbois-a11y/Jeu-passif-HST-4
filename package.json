@@ -11,7 +11,9 @@
     "build": "npm run verifier && npm run donnees && vite build",
     "preview": "vite preview",
     "test": "npm run donnees -- --brouillons && vitest run",
-    "check": "npm run donnees -- --brouillons && svelte-check --tsconfig ./tsconfig.json"
+    "check": "npm run donnees -- --brouillons && svelte-check --tsconfig ./tsconfig.json",
+    "test:sql": "bash scripts/tester-sql.sh",
+    "test:integration": "node scripts/test-integration.ts"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "7.3.1",

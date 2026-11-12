@@ -3,12 +3,13 @@
   import { jeu } from '../lib/donnees.ts';
   import { outilsLocaux } from '../lib/backend/local.ts';
   import { NOM_VILLE_MAX } from '@jeu/actions.ts';
+  import { untrack } from 'svelte';
   import Modale from './Modale.svelte';
 
   let { partie, fermer, deconnecter }: { partie: Partie; fermer: () => void; deconnecter: () => void } = $props();
 
   let etat = $derived(partie.affiche!);
-  let nom = $state(partie.affiche?.townName ?? '');
+  let nom = $state(untrack(() => partie.affiche?.townName ?? ''));
   let local = $derived(partie.backend.mode === 'local');
 
   function nommer(e: SubmitEvent) {

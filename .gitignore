@@ -6,4 +6,4 @@ supabase/functions/_shared/donnees/donnees.json
 supabase/.temp/
 *.log
 .DS_Store
-dist-test/
+dist-*/

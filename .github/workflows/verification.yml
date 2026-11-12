@@ -20,6 +20,15 @@ jobs:
         run: npm run verifier
       - name: Tests du moteur
         run: npm test
+      - name: Tests de la base de données (RLS, NIP)
+        run: bash scripts/tester-sql.sh
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Types des edge functions
+        run: |
+          npm run donnees
+          deno check supabase/functions/*/index.ts
       - name: Types
         run: npm run check
       - name: Compilation

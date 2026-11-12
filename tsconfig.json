@@ -19,5 +19,5 @@
       "@donnees/*": ["./supabase/functions/_shared/donnees/*"]
     }
   },
-  "include": ["app/src/**/*", "supabase/functions/_shared/**/*", "scripts/**/*", "tests/**/*", "vite.config.ts"]
+  "include": ["app/src/**/*", "supabase/functions/_shared/jeu/**/*", "scripts/**/*", "tests/**/*", "vite.config.ts"]
 }
